@@ -1,8 +1,54 @@
 /**
 * CSS file to hold styles that apply across the application
 */
-
+/* add an amazing animation to the social icons */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* apply the animation to all social icons */
+.socialIcon {
+  animation: bounce 1s infinite;
+}
+
+/* add the styles for the main container */
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 330px 300px;
+  margin: 20px auto;
+}
+
+/* add the styles for each box */
+.container .box {
+  border-radius: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+/* add the styles for the social icons */
+img.socialIcon {
+  height: 30px;
+  width: 30px;
+}
 
 html,
 body {
